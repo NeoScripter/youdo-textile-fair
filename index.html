@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="none" onload="if(media!='all') media='all'" rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico">
+    <title>Textile Fair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header-primary flex items-center gap-16 sm:gap-4 md:gap-16 text-white text-sm p-2 sm-1 max-w-5xl mx-auto px-6 sticky select-none">
+            <div class="block md:hidden z-10">B</div>
+            <div class="absolute h-full header-overlay w-screen"></div>
+            <div class="z-10"><img src="assets/svgs/logo.svg" alt="логотип" class="w-60 sm:w-52"></div>
+            <ul class="items-center gap-4 ff-medium z-10 hidden lg:flex">
+                <li>Каталог</li>
+                <li class="rounded-full p-2 px-3 text-gray-500 font-bold bg-white flex items-center gap-2 w-48"><img src="assets/svgs/search.svg" alt="Лупа"><input type="text" placeholder="Поиск" class="w-full outline-none"></li>
+                <li>Возврат</li>
+                <li>О нас</li>
+            </ul>
+            <div class="rounded-full p-2 px-3 text-gray-500 font-bold bg-white items-center gap-2 w-32 hidden sm:flex lg:hidden z-10"><img src="assets/svgs/search.svg" alt="Лупа"><input type="text" placeholder="Поиск" class="w-full outline-none"></div>
+            <div class="items-center gap-16 hidden sm:flex z-10 ml-auto">
+                <ul class="flex items-center gap-4 ff-medium">
+                    <li class="flex gap-1 items-center hover:opacity-80 cursor-pointer"><img src="assets/svgs/user.svg" alt="пользователь">Вход</li>
+                    <li class="cursor-pointer hover-underline">Бонусы</li>
+                </ul>
+                <div class="relative">
+                    <div class="absolute flex items-center justify-center text-orange bg-white rounded-full px-2 h-4 text-sm floating-counter">0</div>
+                    <img src="assets/svgs/cart.svg" alt="корзина" class="cursor-pointer hover:opacity-80">
+                </div>
+            </div>
+            <img src="assets/svgs/search-gray.svg" alt="Лупа" class="block sm:hidden z-10">
+        </header>
+        <section class="max-w-5xl mx-auto">
+            <ul class="items-center justify-between gap-2 lg:my-4 hidden lg:flex text-sm ul-animated select-none lowercase">
+                <li class="bg-gray-100 px-6 py-3 rounded-xl">Подушки</li>
+                <li class="bg-gray-100 px-6 py-3 rounded-xl">Одеяла</li>
+                <li class="bg-gray-100 px-6 py-3 rounded-xl">Пледы</li>
+                <li class="bg-gray-100 px-6 py-3 rounded-xl">Постельное белье</li>
+                <li class="bg-gray-100 px-6 py-3 rounded-xl">Покрывала</li>
+                <li class="bg-gray-100 px-6 py-3 rounded-xl">Полотенца</li>
+                <li class="bg-gray-100 px-6 py-3 rounded-xl">Халаты</li>
+                <li class="bg-gray-100 px-6 py-3 rounded-xl">Для кухни</li>
+            </ul>
+        </section>
+        <section class="max-w-5xl mx-auto">
+            <div class="container mx-auto mt-10">
+                <div class="carousel">
+                    <button class="carousel-button carousel-button-left rounded-full flex items-center justify-center p-4 text-lg">&lt;</button>
+                    <div class="carousel-inner">
+                        <div class="carousel-item mr-4">
+                            <img src="assets/images/banner/banner-1.webp" alt="Image 1" class="w-full h-full object-cover rounded-2xl">
+                        </div>
+                        <div class="carousel-item mr-4">
+                            <img src="assets/images/banner/banner-2.webp" alt="Image 2" class="w-full h-full object-cover rounded-2xl">
+                        </div>
+                        <div class="carousel-item mr-4">
+                            <img src="assets/images/banner/banner-3.webp" alt="Image 3" class="w-full h-full object-cover rounded-2xl">
+                        </div>
+                        <div class="carousel-item mr-4">
+                            <img src="assets/images/banner/banner-4.webp" alt="Image 4" class="w-full h-full object-cover rounded-2xl">
+                        </div>
+                    </div>
+                    <button class="carousel-button carousel-button-right rounded-full flex items-center justify-center p-4 text-lg">&gt;</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url(assets/fonts/Montserrat-Bold.woff2) format("woff2"), url(assets/fonts/Montserrat-Bold.woff2) format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat Medium";
+    src: url(assets/fonts/Montserrat-Medium.woff2) format("woff2"),
+        url(assets/fonts/Montserrat-Medium.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url(assets/fonts/Montserrat-Regular.woff2) format("woff2"),
+        url(assets/fonts/Montserrat-Regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat Thin";
+    src: url(assets/fonts/Montserrat-Thin.woff2) format("woff2"), url(assets/fonts/Montserrat-Thin.woff) format("woff");
+}
+
+:root {
+    --primary-orange: #fd7e14;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-x: clip;
+}
+
+body {
+    font-family: "Montserrat Regular", Arial, Verdana, Tahoma, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-x: clip;
+}
+
+.text-orange {
+    color: var(--primary-orange);
+}
+
+.floating-counter {
+    right: -15px;
+    top: -5px;
+}
+
+.hover-underline {
+    text-underline-offset: 0.3em;
+    transition: all 0.5s ease;
+}
+
+.hover-underline:is(:hover, :active, :focus-visible) {
+    text-underline-offset: 0.3em;
+    text-decoration: underline;
+}
+
+.header-overlay {
+    background-image: url(assets/images/orange-bg.jpg);
+    left: 50%;
+    translate: -50%;
+}
+
+.ff-medium {
+    font-family: "Montserrat Medium";
+}
+
+.ff-bold {
+    font-family: "Montserrat Bold";
+}
+
+.ul-animated li {
+    transition: all 0.3s ease;
+}
+
+.ul-animated li:is(:hover, :active, :focus-visible) {
+    background-color: #fff;
+    color: var(--primary-orange);
+    outline: 1px solid var(--primary-orange);
+    user-select: none;
+    cursor: pointer;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+    flex: 1 0 75%;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: gray;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    aspect-ratio: 1/1;
+}
+.carousel-button-left {
+    left: 0;
+}
+.carousel-button-right {
+    right: 0;
+}
