@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header-primary flex items-center gap-16 sm:gap-4 md:gap-16 text-white text-sm p-2 sm-1 max-w-5xl mx-auto px-6 sticky select-none">
+        <header class="header-primary flex items-center gap-16 sm:gap-4 md:gap-16 text-white text-sm p-2 sm-1 max-w-6xl mx-auto px-6 sticky top-0 select-none z-20">
             <div class="block md:hidden z-10">B</div>
             <div class="absolute h-full header-overlay w-screen"></div>
             <div class="z-10"><img src="assets/svgs/logo.svg" alt="логотип" class="w-60 sm:w-52"></div>
@@ -35,7 +35,7 @@
             </div>
             <img src="assets/svgs/search-gray.svg" alt="Лупа" class="block sm:hidden z-10">
         </header>
-        <section class="max-w-5xl mx-auto">
+        <section class="max-w-6xl mx-auto">
             <ul class="items-center justify-between gap-2 lg:my-4 hidden lg:flex text-sm ul-animated select-none lowercase">
                 <li class="bg-gray-100 px-6 py-3 rounded-xl">Подушки</li>
                 <li class="bg-gray-100 px-6 py-3 rounded-xl">Одеяла</li>
@@ -47,10 +47,10 @@
                 <li class="bg-gray-100 px-6 py-3 rounded-xl">Для кухни</li>
             </ul>
         </section>
-        <section class="max-w-5xl mx-auto">
-            <div class="container mx-auto mt-10">
+        <section class="max-w-6xl mx-auto mb-16">
+            <div class="container mx-auto mt-4">
                 <div class="carousel">
-                    <button class="carousel-button carousel-button-left rounded-full flex items-center justify-center p-4 text-lg">&lt;</button>
+                    <button class="carousel-button carousel-button-left rounded-full flex items-center justify-center p-4 text-lg box-shadow">&lt;</button>
                     <div class="carousel-inner">
                         <div class="carousel-item mr-4">
                             <img src="assets/images/banner/banner-1.webp" alt="Image 1" class="w-full h-full object-cover rounded-2xl">
@@ -65,7 +65,86 @@
                             <img src="assets/images/banner/banner-4.webp" alt="Image 4" class="w-full h-full object-cover rounded-2xl">
                         </div>
                     </div>
-                    <button class="carousel-button carousel-button-right rounded-full flex items-center justify-center p-4 text-lg">&gt;</button>
+                    <button class="carousel-button carousel-button-right rounded-full flex items-center justify-center p-4 text-lg box-shadow">&gt;</button>
+                </div>
+            </div>
+        </section>
+        <section class="max-w-6xl mx-auto">
+            <h3 class="text-3xl ff-medium mb-6 px-4">Действующие акции</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 text-sm mb-8 px-2 lg:px-0 grid-animated">
+                <div class="p-4 rounded-2xl box-shadow">
+                    <p class="uppercase ff-bold text-center">Полотенца</p>
+                    <img src="assets/images/promos/promos-top-1.webp" alt="промо 1" class="mx-auto">
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <p class="uppercase ff-bold text-center">Подушки</p>
+                    <img src="assets/images/promos/promos-top-2.webp" alt="промо 2" class="mx-auto">
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <p class="uppercase ff-bold text-center">Одеяла</p>
+                    <img src="assets/images/promos/promos-top-3.webp" alt="промо 3" class="mx-auto">
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <p class="uppercase ff-bold text-center">Пледы</p>
+                    <img src="assets/images/promos/promos-top-4.webp" alt="промо 4" class="mx-auto">
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <p class="uppercase ff-bold text-center">Комплекты постельного белья</p>
+                    <img src="assets/images/promos/promos-top-5.webp" alt="промо 5" class="mx-auto">
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <p class="uppercase ff-bold text-center">Халаты Комплекты для сауны</p>
+                    <img src="assets/images/promos/promos-top-6.webp" alt="промо 6" class="mx-auto">
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <p class="uppercase ff-bold text-center">Скатерти</p>
+                    <img src="assets/images/promos/promos-top-7.webp" alt="промо 7" class="mx-auto">
+                </div>
+            </div>
+            <div class="mb-8 grid grid-cols-2 gap-4 px-2 text-xl">
+                <div class="py-4 px-2 lg:p-8 lg:text-2xl bg-img-bonus-1 ff-bold rounded-2xl">
+                    Подарочная <br> карта
+                </div>
+                <div class="py-4 px-2  lg:p-8 lg:text-2xl bg-img-bonus-2 ff-bold rounded-2xl">
+                    Бонусная <br> система
+                </div>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm mb-8 px-2 lg:px-0 grid-animated pt-1">
+                <div class="p-4 rounded-2xl box-shadow">
+                    <img src="assets/images/promos/promo-middle-1.webp" alt="промо 1" class="mx-auto">
+                    <p class="uppercase ff-medium text-center">Одеяла</p>
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <img src="assets/images/promos/promo-middle-2.webp" alt="промо 2" class="mx-auto">
+                    <p class="uppercase ff-medium text-center">Пледы</p>
+
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <img src="assets/images/promos/promo-middle-3.webp" alt="промо 3" class="mx-auto">
+                    <p class="uppercase ff-medium text-center">Подарочные сертификаты</p>
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <img src="assets/images/promos/promo-middle-4.webp" alt="промо 4" class="mx-auto">
+                    <p class="uppercase ff-medium text-center">Подушки</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm mb-8 px-2 lg:px-0 grid-animated pt-1">
+                <div class="p-4 rounded-2xl box-shadow">
+                    <img src="assets/images/promos/promo-middle-1.webp" alt="промо 1" class="mx-auto">
+                    <p class="uppercase ff-medium text-center">Одеяла</p>
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <img src="assets/images/promos/promo-middle-2.webp" alt="промо 2" class="mx-auto">
+                    <p class="uppercase ff-medium text-center">Пледы</p>
+
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <img src="assets/images/promos/promo-middle-3.webp" alt="промо 3" class="mx-auto">
+                    <p class="uppercase ff-medium text-center">Подарочные сертификаты</p>
+                </div>
+                <div class="p-4 rounded-2xl box-shadow">
+                    <img src="assets/images/promos/promo-middle-4.webp" alt="промо 4" class="mx-auto">
+                    <p class="uppercase ff-medium text-center">Подушки</p>
                 </div>
             </div>
         </section>

@@ -81,6 +81,15 @@ body {
     cursor: pointer;
 }
 
+.grid-animated > div {
+    cursor: pointer;
+    transition: outline 0.3s ease;
+}
+
+.grid-animated > div:is(:hover, :active, :focus-visible) {
+    outline: 1px solid var(--primary-orange);
+}
+
 .carousel {
     overflow: hidden;
     width: 100%;
@@ -109,4 +118,20 @@ body {
 }
 .carousel-button-right {
     right: 0;
+}
+
+.box-shadow {
+    box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.bg-img-bonus-1 {
+    background-image: url(assets/images/promos/bonus-1.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-img-bonus-2 {
+    background-image: url(assets/images/promos/bonus-2.webp);
+    background-size: cover;
+    background-position: center;
 }
