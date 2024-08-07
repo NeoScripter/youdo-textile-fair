@@ -43,8 +43,8 @@ function initUpperCarousel() {
         }
     }
 
-    $(".carousel-button-right").click(nextSlide);
-    $(".carousel-button-left").click(prevSlide);
+    $(".carousel-button-next").click(nextSlide);
+    $(".carousel-button-prev").click(prevSlide);
 }
 
 function initBottomCarousel() {
@@ -79,12 +79,12 @@ function initBottomCarousel() {
     }
 
     function updateButtons() {
-        $(".hits-carousel-button-left").attr("disabled", currentIndex === 0);
-        $(".hits-carousel-button-right").attr("disabled", currentIndex === totalItems - visibleItems() - 1);
+        $(".hits-carousel-button-prev").attr("disabled", currentIndex === 0);
+        $(".hits-carousel-button-next").attr("disabled", currentIndex === totalItems - visibleItems() - 1);
     }
 
-    $(".hits-carousel-button-right").click(nextSlide);
-    $(".hits-carousel-button-left").click(prevSlide);
+    $(".hits-carousel-button-next").click(nextSlide);
+    $(".hits-carousel-button-prev").click(prevSlide);
 
     updateButtons();
 }
