@@ -89,9 +89,26 @@ function initBottomCarousel() {
     updateButtons();
 }
 
+function initSearchPanel() {
+    $('#openSearchPanel').click(function() {
+        $('#searchPanel').addClass('search-panel-open');
+    });
+
+    $(document).click(function(event) {
+        if (!$(event.target).closest('#searchPanel, #openSearchPanel').length) {
+            $('#searchPanel').removeClass('search-panel-open');
+        }
+    });
+
+    $('#searchPanel').click(function(event) {
+        event.stopPropagation();
+    });
+}
+
 $(document).ready(function () {
     initUpperCarousel();
     initBottomCarousel();
+    initSearchPanel();
 
     $('#burgerMenu').click(function() {
         $('#sideMenu').addClass('menu-open');

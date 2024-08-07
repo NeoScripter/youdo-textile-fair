@@ -53,7 +53,8 @@
                     <img src="assets/svgs/cart.svg" alt="корзина" class="cursor-pointer hover:opacity-80">
                 </div>
             </div>
-            <img src="assets/svgs/search-gray.svg" alt="Лупа" class="block sm:hidden z-10">
+            <img src="assets/svgs/search-gray.svg" alt="Лупа" class="block sm:hidden z-10 cursor-pointer" id="openSearchPanel">
+            <div id="searchPanel" class="search-panel fixed top-0 right-0 w-64 z-20 rounded-full p-2 px-3 text-gray-500 font-bold bg-white flex items-center gap-2 w-48"><img src="assets/svgs/search.svg" alt="Лупа"><input type="text" placeholder="Поиск" class="w-full outline-none"></div>
         </header>
         <section class="max-w-6xl mx-auto">
             <ul class="items-center justify-between gap-2 lg:my-4 hidden lg:flex text-sm ul-animated select-none lowercase">
