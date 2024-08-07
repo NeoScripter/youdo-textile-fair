@@ -92,4 +92,12 @@ function initBottomCarousel() {
 $(document).ready(function () {
     initUpperCarousel();
     initBottomCarousel();
+
+    $('#burgerMenu').click(function() {
+        $('#sideMenu').addClass('menu-open');
+    });
+
+    $('#closeMenu').click(function() {
+        $('#sideMenu').removeClass('menu-open');
+    });
 });

@@ -11,16 +11,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper relative">
+        <div id="sideMenu" class="menu fixed top-0 left-0 h-full text-white p-4 z-30">
+            <div class="absolute bg-white rounded-full w-6 h-6 p-1 right-5 cursor-pointer" id="closeMenu"><img src="assets/svgs/close.svg" alt="Закрыть"></div>
+            <ul class="burger-ul animated-list flex flex-col gap-2 mt-16">
+                <li><a href="">подушки</a></li>
+                <li><a href="">одеяла</a></li>
+                <li><a href="">пледы</a></li>
+                <li><a href="">постельное белье</a></li>
+                <li><a href="">покрывала</a></li>
+                <li><a href="">полотенца</a></li>
+                <li><a href="">халаты</a></li>
+                <li><a href="">для кухни</a></li>
+            </ul>
+            <ul class="flex flex-col gap-2 text-white mt-12 text-sm">
+                <li><a href="">Каталог</a></li>
+                <li><a href="">Сертификаты</a></li>
+                <li><a href="">Бонусы</a></li>
+                <li><a href="">Условия возврата</a></li>
+                <li><a href="">Компания</a></li>
+            </ul>
+        </div>
         <header class="header-primary flex items-center gap-16 sm:gap-4 md:gap-16 text-white text-sm p-2 sm-1 max-w-6xl mx-auto px-6 sticky top-0 select-none z-20">
-            <div class="block md:hidden z-10">B</div>
+            <div class="block md:hidden z-10 cursor-pointer" id="burgerMenu"><img src="assets/svgs/burger.svg" alt="бургер меню"></div>
             <div class="absolute h-full header-overlay w-screen"></div>
             <div class="z-10"><img src="assets/svgs/logo.svg" alt="логотип" class="w-60 sm:w-52"></div>
             <ul class="items-center gap-4 ff-medium z-10 hidden lg:flex">
-                <li>Каталог</li>
+                <li><a href="">Каталог</a></li>
                 <li class="rounded-full p-2 px-3 text-gray-500 font-bold bg-white flex items-center gap-2 w-48"><img src="assets/svgs/search.svg" alt="Лупа"><input type="text" placeholder="Поиск" class="w-full outline-none"></li>
-                <li>Возврат</li>
-                <li>О нас</li>
+                <li><a href="">Возврат</a></li>
+                <li><a href="">О нас</a></li>
             </ul>
             <div class="rounded-full p-2 px-3 text-gray-500 font-bold bg-white items-center gap-2 w-32 hidden sm:flex lg:hidden z-10"><img src="assets/svgs/search.svg" alt="Лупа"><input type="text" placeholder="Поиск" class="w-full outline-none"></div>
             <div class="items-center gap-16 hidden sm:flex z-10 ml-auto">
@@ -472,6 +492,13 @@
                 <div>Напишите нам</div>
             </a>
         </footer>
+        <div class="fixed bottom-0 p-4 w-full bg-white border-t border-gray-400">
+            <ul class="flex items-center justify-around">
+                <li><a href=""><img src="assets/svgs/house.svg" alt=""></a></li>
+                <li><a href=""><img src="assets/svgs/cart-orange.svg" alt="Оранжевый значок корзины"></a></li>
+                <li><a href=""><img src="assets/svgs/user-orange.svg" alt="Оранжевый значок пользователя"></a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

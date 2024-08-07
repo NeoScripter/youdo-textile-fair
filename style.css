@@ -218,6 +218,27 @@ body {
     color: var(--primary-orange);
 }
 
+.menu {
+    width: min(100%, 400px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    background-image: url(assets/images/orange-bg.jpg);
+}
+.menu-open {
+    transform: translateX(0);
+}
+
+.burger-ul > li {
+    background-color: #fff;
+    border-radius: 1em;
+    padding: 2px;
+    color: #000;
+}
+
+.burger-ul a {
+    padding-left: 0.5em;
+}
+
 @media screen and ((min-width: 768px) and (max-width: 1024px)) {
     .w-max-33 {
         max-width: 33%;
