@@ -1,51 +1,95 @@
-$(document).ready(function() {
-    const carouselInner = $('.carousel-inner');
-    const carouselItems = $('.carousel-item');
+function initUpperCarousel() {
+    const carouselInner = $(".carousel-inner");
+    const carouselItems = $(".carousel-item");
     const totalItems = carouselItems.length;
     const itemWidth = carouselItems.outerWidth();
 
-    // Clone the first and last items
     const firstItemClone = carouselItems.first().clone();
     const lastItemClone = carouselItems.last().clone();
 
-    // Append and prepend clones
     carouselInner.append(firstItemClone);
     carouselInner.prepend(lastItemClone);
 
-    let currentIndex = 1; // Start from the first actual item
+    let currentIndex = 1;
 
-    // Set initial position to the first actual item
-    carouselInner.css('transform', `translateX(-${currentIndex * itemWidth + currentIndex * 16}px)`);
+    carouselInner.css("transform", `translateX(-${currentIndex * (itemWidth + currentIndex)}px)`);
 
-    function updateCarouselPosition() {
-        carouselInner.css('transform', `translateX(-${currentIndex * itemWidth + currentIndex * 16}px)`);
-        carouselInner.css('transition', 'transform 0.5s ease-in-out');
+    function updateCarousel() {
+        carouselInner.css("transform", `translateX(-${currentIndex * (itemWidth + currentIndex)}px)`);
+        carouselInner.css("transition", "transform 0.5s ease-in-out");
     }
 
-    function moveToNext() {
+    function nextSlide() {
         currentIndex++;
-        updateCarouselPosition();
+        updateCarousel();
         if (currentIndex === totalItems + 1) {
             setTimeout(() => {
-                carouselInner.css('transition', 'none');
+                carouselInner.css("transition", "none");
                 currentIndex = 1;
-                updateCarouselPosition();
+                updateCarousel();
             }, 500);
         }
     }
 
-    function moveToPrev() {
+    function prevSlide() {
         currentIndex--;
-        updateCarouselPosition();
+        updateCarousel();
         if (currentIndex === 0) {
             setTimeout(() => {
-                carouselInner.css('transition', 'none');
+                carouselInner.css("transition", "none");
                 currentIndex = totalItems;
-                updateCarouselPosition();
+                updateCarousel();
             }, 500);
         }
     }
 
-    $('.carousel-button-right').click(moveToNext);
-    $('.carousel-button-left').click(moveToPrev);
+    $(".carousel-button-right").click(nextSlide);
+    $(".carousel-button-left").click(prevSlide);
+}
+
+function initBottomCarousel() {
+    const carouselInner = $(".hits-carousel-inner");
+    const carouselItems = $(".hits-carousel-item");
+    const totalItems = carouselItems.length;
+    const itemWidth = carouselItems.outerWidth();
+    let currentIndex = 0;
+
+    function visibleItems() {
+        const wrapperWidth = carouselInner.outerWidth();
+        return Math.floor(wrapperWidth / (itemWidth + 16)) - 1;
+    }
+
+    function updateCarousel() {
+        carouselInner.css("transform", `translateX(-${currentIndex * (itemWidth + 16)}px)`);
+        updateButtons();
+    }
+
+    function nextSlide() {
+        if (currentIndex < totalItems - visibleItems() - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    }
+
+    function updateButtons() {
+        $(".hits-carousel-button-left").attr("disabled", currentIndex === 0);
+        $(".hits-carousel-button-right").attr("disabled", currentIndex === totalItems - visibleItems() - 1);
+    }
+
+    $(".hits-carousel-button-right").click(nextSlide);
+    $(".hits-carousel-button-left").click(prevSlide);
+
+    updateButtons();
+}
+
+$(document).ready(function () {
+    initUpperCarousel();
+    initBottomCarousel();
 });

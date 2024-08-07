@@ -135,3 +135,38 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+.hits-carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.hits-carousel-inner {
+    transition: transform 0.3s ease-in-out;
+}
+.hits-carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: gray;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    aspect-ratio: 1/1;
+    padding: 1em;
+    border-radius: 50%;
+}
+.hits-carousel-button-left {
+    left: 0;
+}
+.hits-carousel-button-right {
+    right: 0;
+}
+.hits-carousel-button[disabled] {
+    display: none;
+}
+
+.box-shadow-yellow {
+    box-shadow: 0px 0px 10px rgb(221 127 15 / 39%);
+}
