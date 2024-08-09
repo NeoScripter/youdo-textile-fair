@@ -176,6 +176,15 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+.hover-inner {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.hover-img {
+    aspect-ratio: 1 / 1;
+}
+
 .hits-carousel-item {
     flex: 1 0 calc(100% / 6);
 }

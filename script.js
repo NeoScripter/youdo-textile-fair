@@ -105,10 +105,49 @@ function initSearchPanel() {
     });
 }
 
+function initHoverCarousel() {
+    const innerWrappers = $(".hover-inner");
+
+    innerWrappers.each(function() {
+        const carouselInner = $(this);
+        const carouselItems = carouselInner.find(".hover-img");
+        const totalItems = carouselItems.length;
+
+        carouselItems.css('flex', `1 0 ${100 / totalItems}%`);
+
+        let currentIndex = 0;
+        let interval;
+
+        function updateCarousel() {
+            const itemWidth = carouselItems.outerWidth();
+            carouselInner.css("transform", `translateX(-${currentIndex * itemWidth}px)`);
+        }
+
+        function nextSlide() {
+            currentIndex++;
+            if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }
+
+        function startCarousel() {
+            interval = setInterval(nextSlide, 3000);
+        }
+
+        function stopCarousel() {
+            clearInterval(interval);
+        }
+
+        carouselInner.hover(startCarousel, stopCarousel);
+    });
+}
+
 $(document).ready(function () {
     initUpperCarousel();
     initBottomCarousel();
     initSearchPanel();
+    initHoverCarousel();
 
     $('#burgerMenu').click(function() {
         $('#sideMenu').addClass('menu-open');
